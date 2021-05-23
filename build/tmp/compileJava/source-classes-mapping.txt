@@ -1,4 +1,0 @@
-CodeKata.java
- CodeKata
- WeatherData
- numberUtils
