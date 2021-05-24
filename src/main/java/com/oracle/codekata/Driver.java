@@ -1,10 +1,6 @@
 package com.oracle.codekata;
-
-
 import com.oracle.codekata.data.Data;
-import com.oracle.codekata.data.WeatherData;
 import com.oracle.codekata.utils.NumberUtils;
-
 import java.util.ArrayList;
 
 public class Driver{

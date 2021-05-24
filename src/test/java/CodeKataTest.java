@@ -1,17 +1,15 @@
+import com.oracle.codekata.FileConsumer;
+import com.oracle.codekata.data.Data;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+import org.junit.jupiter.api.Assertions;
 
 class CodeKataTest {
 
-    /*
-    CodeKata _CK = null;
-
     @BeforeEach
     void setUp() {
-        _CK=new CodeKata();
     }
 
     @AfterEach
@@ -19,8 +17,16 @@ class CodeKataTest {
     }
 
     @Test
-    void readFileAndOutput() {
-        CodeKata.ReadFileAndOutput("/Users/stephenterapak/IdeaProjects/Co
+    void readWeatherFile() {
+        try{
+            FileConsumer fc = new FileConsumer();
+            ArrayList<Data> dList = fc.ReadFile("/data/weather.dat");
+            Assertions.assertTrue(dList.size()>0);
+        }
+        catch(Exception e){
+            Assertions.fail();
+        }
+
     }
-    */
+
 }
