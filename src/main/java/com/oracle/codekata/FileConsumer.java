@@ -4,14 +4,15 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 import com.oracle.codekata.data.WeatherData;
+import com.oracle.codekata.data.Data;
 import com.oracle.codekata.utils.NumberUtils;
 
 
 public class FileConsumer {
-    public void ReadFileAndOutput(String inVal) {
-        try {
-            ArrayList<WeatherData> wdLIst = new ArrayList<>();
+    public ArrayList<Data> ReadFile(String inVal) {
+        ArrayList<Data> wdLIst = new ArrayList<>();
 
+        try {
             // pass the path to the file as a parameter
             File file =
                     new File("/Users/stephenterapak/IdeaProjects/CommandLine/Data/weather.dat");
@@ -35,11 +36,12 @@ public class FileConsumer {
                 wdLIst.add(wd);
             }
 
-            NumberUtils.PrintSmallestDayVariance(wdLIst);
+
+
         } catch (Exception e) {
             System.out.println("!!!!!!!!!!EXCEPTION:" + e.getMessage());
-
         }
 
+        return wdLIst;
     }
 }
