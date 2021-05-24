@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CodeKataTest {
 
+    /*
     CodeKata _CK = null;
 
     @BeforeEach
@@ -21,4 +22,5 @@ class CodeKataTest {
     void readFileAndOutput() {
         CodeKata.ReadFileAndOutput("/Users/stephenterapak/IdeaProjects/Co
     }
+    */
 }

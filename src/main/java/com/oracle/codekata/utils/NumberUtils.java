@@ -1,15 +1,9 @@
 package com.oracle.codekata.utils;
 
-import com.oracle.codekata.data.Data;
-
+import com.oracle.codekata.data.WeatherData;
 import java.util.ArrayList;
 
-class WeatherData extends Data {
-    String day;
-    int variance;
-}
-
-class numberUtils{
+public class NumberUtils {
     public static Boolean IsNumber(String inStr){
         //should turn into function
         try{
@@ -30,14 +24,14 @@ class numberUtils{
 
     public static void PrintSmallestDayVariance(ArrayList<WeatherData> inList) {
 
-        int variance = inList.get(0).variance;
+        int variance = inList.get(0).getVariance();
         String day = "";
 
         for (WeatherData curWD : inList) {
 
-            if(curWD.variance < variance) {
-                variance = curWD.variance;
-                day = curWD.day;
+            if(curWD.getVariance() < variance) {
+                variance = curWD.getVariance();
+                day = curWD.getDay();
             }
         }
 
