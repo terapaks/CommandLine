@@ -23,5 +23,10 @@ public abstract class Data {
 
     public Date updateDate;
 
+    public final static String WEATHER_COMMAND_LINE="weather";
+    public final static String FOOTBALL_COMMAND_LINE="football";
+
+    public final static String WEATHER_FILE="/data/weather.dat";
+    public final static String FOOTBALL_FILE="/data/football.dat";
 
 }
