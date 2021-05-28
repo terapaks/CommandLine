@@ -7,14 +7,15 @@ public class Driver{
     static public void main(String[] args) {
 
         FileConsumer fc = new FileConsumer();
-        ArrayList<Data> dList = null;
+        ArrayList<Data> dList;
+        String val;
 
         if(args.length == 0){
             System.out.println("You must specify the data file we are using.  So please enter weather or football.");
             return;
         }
         else{
-            String val = args[0];
+            val = args[0];
 
             if(val.equals(Data.WEATHER_COMMAND_LINE) ){
                 dList = fc.ReadFile(Data.WEATHER_FILE);
@@ -29,8 +30,18 @@ public class Driver{
 
         }
 
-        if(dList != null){
-            NumberUtils.PrintSmallestDayVariance(dList);
+        if(dList == null){
+            System.out.println("File read failed.");
+
+        }
+        else{
+            if(val.equals(Data.WEATHER_COMMAND_LINE) ){
+                NumberUtils.PrintSmallestDayVariance(dList);
+            }
+            else if(val.equals(Data.FOOTBALL_COMMAND_LINE)){
+                NumberUtils.PrintSmallestDayVariance(dList);
+            }
+
         }
 
     }
