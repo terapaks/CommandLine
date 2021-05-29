@@ -1,4 +1,4 @@
-import com.oracle.codekata.FileConsumer;
+import com.oracle.codekata.utils.FileConsumer;
 import com.oracle.codekata.data.Data;
 import com.oracle.codekata.data.Operations;
 import org.junit.jupiter.api.AfterEach;

@@ -1,4 +1,4 @@
-package com.oracle.codekata;
+package com.oracle.codekata.utils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -7,12 +7,11 @@ import java.util.Scanner;
 import com.oracle.codekata.data.Operations;
 import com.oracle.codekata.data.WeatherData;
 import com.oracle.codekata.data.Data;
-import com.oracle.codekata.utils.NumberUtils;
 
 
-public class FileConsumer {
+public abstract class FileConsumer {
     public ArrayList<Data> ReadFile(Operations inOper) {
-        ArrayList<Data> wdLIst = new ArrayList<>();
+        ArrayList<Data> dataLIst = new ArrayList<>();
         String path = "";
 
         if(inOper==Operations.WEATHER){
@@ -29,21 +28,16 @@ public class FileConsumer {
             Scanner sc = new Scanner(file);
 
             while (sc.hasNextLine()) {
-                WeatherData wd = new WeatherData();
                 String curStr = sc.nextLine();
-                String[] splitStr = curStr.trim().split("\\s+");
 
-                if (!NumberUtils.IsNumber(splitStr[0]))
-                    continue;
+                Data data = ParseLine(curStr);
 
-                wd.setDay(splitStr[0]) ;
-                int max = Integer.parseInt(NumberUtils.CleanString(splitStr[1]));
-                int min = Integer.parseInt(NumberUtils.CleanString(splitStr[2]));
-                wd.setVariance(max - min);
+                if(data!=null)
+                    dataLIst.add(data);
 
                 //System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", wd.day, wd.variance);
 
-                wdLIst.add(wd);
+
             }
 
 
@@ -52,11 +46,15 @@ public class FileConsumer {
             System.out.println("FILE READ EXCEPTION: " + e.getMessage());
         }
 
-        if(wdLIst.isEmpty()){
+        if(dataLIst.isEmpty()){
             System.out.println(Data.READ_FILE_FAILED);
             System.exit(0);
         }
 
-        return wdLIst;
+        return dataLIst;
+    }
+
+    public Data ParseLine(String inStr){
+        return null;
     }
 }
