@@ -1,4 +1,4 @@
-package com.oracle.codekata.utils;
+package com.oracle.codekata.files;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,19 +10,20 @@ import com.oracle.codekata.data.Data;
 
 
 public abstract class FileConsumer {
-    public ArrayList<Data> ReadFile(Operations inOper) {
+    protected Operations _operation;
+
+    public ArrayList<Data> ReadFile() {
         ArrayList<Data> dataLIst = new ArrayList<>();
         String path = "";
 
-        if(inOper==Operations.WEATHER){
+        if(_operation==Operations.WEATHER){
             path=Data.WEATHER_FILE;
         }
-        else if(inOper==Operations.FOOTBALL){
+        else if(_operation==Operations.FOOTBALL){
             path=Data.FOOTBALL_FILE;
         }
 
         try {
-            // pass the path to the file as a parameter
             File file =
                     new File(path);
             Scanner sc = new Scanner(file);

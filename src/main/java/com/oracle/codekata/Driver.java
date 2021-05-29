@@ -1,9 +1,10 @@
 package com.oracle.codekata;
 import com.oracle.codekata.data.Data;
+import com.oracle.codekata.files.FileConsumer;
+import com.oracle.codekata.files.WeatherFileConsumer;
+import com.oracle.codekata.print.PrintResults;
 import com.oracle.codekata.data.Operations;
-import com.oracle.codekata.utils.FileConsumer;
-import com.oracle.codekata.utils.NumberUtils;
-import com.oracle.codekata.utils.WeatherFileConsumer;
+import com.oracle.codekata.print.WeatherPrintResults;
 
 import java.util.ArrayList;
 
@@ -13,6 +14,8 @@ public class Driver{
         Operations oper = Operations.UNKNOWNN;
 
         FileConsumer fc = null;
+        PrintResults pr = null;
+
         ArrayList<Data> dList = new ArrayList<>();
         String val = "";
 
@@ -26,10 +29,12 @@ public class Driver{
             if(val.equals(Data.WEATHER_COMMAND_LINE) ){
                 oper=Operations.WEATHER;
                 fc = new WeatherFileConsumer();
+                pr = new WeatherPrintResults();
             }
             else if(val.equals(Data.FOOTBALL_COMMAND_LINE)){
                 oper=Operations.FOOTBALL;
                 fc = new WeatherFileConsumer();
+                pr = new WeatherPrintResults();
             }
             else {
                 System.out.println(Data.COMMAND_LINE_ERROR);
@@ -39,9 +44,9 @@ public class Driver{
         }
 
         if(fc!=null){
-            dList = fc.ReadFile(oper);
+            dList = fc.ReadFile();
 
-            NumberUtils.PrintResult(dList, oper);
+            pr.PrintResult(dList, oper);
         }
 
 

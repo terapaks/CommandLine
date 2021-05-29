@@ -24,32 +24,6 @@ public class NumberUtils {
 
     }
 
-    public static void PrintResult(ArrayList<Data> inList, Operations inOper){
-        if(inOper==Operations.WEATHER){
-            PrintSmallestDayVariance(inList);
-        }
-        else if(inOper==Operations.FOOTBALL){
-            //TODO Finish the implementation
-        }
 
-    }
-
-    public static void PrintSmallestDayVariance(ArrayList<Data> inList) {
-
-        WeatherData wd = (WeatherData)inList.get(0);
-        int variance =  wd.getVariance();
-        String day = "";
-
-        for (Data curData : inList) {
-
-            WeatherData curWD = (WeatherData) curData;
-            if(curWD.getVariance() < variance) {
-                variance = curWD.getVariance();
-                day = curWD.getDay();
-            }
-        }
-
-        System.out.printf("The day with the least temperature variance was %s and the value was %s..", day, variance);
-    }
 
 }
