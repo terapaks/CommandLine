@@ -7,12 +7,12 @@ public class Driver{
     static public void main(String[] args) {
 
         FileConsumer fc = new FileConsumer();
-        ArrayList<Data> dList;
-        String val;
+        ArrayList<Data> dList = new ArrayList<>();
+        String val = new String("");
 
         if(args.length == 0){
-            System.out.println("You must specify the data file we are using.  So please enter weather or football.");
-            return;
+            System.out.println(Data.COMMAND_LINE_ERROR);
+            System.exit(0);
         }
         else{
             val = args[0];
@@ -24,25 +24,28 @@ public class Driver{
                 dList = fc.ReadFile(Data.FOOTBALL_FILE);
             }
             else {
-                System.out.println("You must specify the data file we are using.  So please enter weather or football.");
-                return;
+                System.out.println(Data.COMMAND_LINE_ERROR);
+                System.exit(0);
             }
 
         }
 
-        if(dList == null){
+        if(dList.size() == 0){
             System.out.println("File read failed.");
-
+            System.exit(0);
         }
-        else{
-            if(val.equals(Data.WEATHER_COMMAND_LINE) ){
-                NumberUtils.PrintSmallestDayVariance(dList);
-            }
-            else if(val.equals(Data.FOOTBALL_COMMAND_LINE)){
-                NumberUtils.PrintSmallestDayVariance(dList);
-            }
 
+        if(val.equals(Data.WEATHER_COMMAND_LINE) ){
+            NumberUtils.PrintSmallestDayVariance(dList);
         }
+        else if(val.equals(Data.FOOTBALL_COMMAND_LINE)){
+            NumberUtils.PrintSmallestDayVariance(dList);
+        }
+        else {
+            System.out.println(Data.COMMAND_LINE_ERROR);
+            System.exit(0);
+        }
+
 
     }
 
