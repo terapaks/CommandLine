@@ -25,7 +25,7 @@ public class FileConsumer {
         try {
             // pass the path to the file as a parameter
             File file =
-                    new File("/Users/stephenterapak/IdeaProjects/CommandLine/Data/weather.dat");
+                    new File(path);
             Scanner sc = new Scanner(file);
 
             while (sc.hasNextLine()) {
@@ -49,7 +49,7 @@ public class FileConsumer {
 
 
         } catch (Exception e) {
-            System.out.println("!!!!!!!!!!EXCEPTION:" + e.getMessage());
+            System.out.println("FILE READ EXCEPTION: " + e.getMessage());
         }
 
         if(wdLIst.isEmpty()){
