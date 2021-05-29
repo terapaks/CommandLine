@@ -1,15 +1,15 @@
 # CommandLine
 CommandLine
-A simple command line utility to find a particular class name in a directory containing jar, war, and ear files.
+So this is a simple utility that intended to demonstrate my coding skills with use of abstraction, encapsulation, and OO skills in general.
 
-A simple utility to find a particular class name in a directory containing jar, war, and ear files. The application recursively decends into the directory looking for files that end in ".jar", ".war", and ".ear" (case insensitive which is not really the standard). Additionally, the program finds any normal files that end in .class also.
+It will print out the results as specified in the coding kata exercise:  http://codekata.com/kata/kata04-data-munging/.
 
-Why did I write this? Because I find that when I'm looking for a particular class to compile with I never seem to know which jar file it is in. This utility simplifies that task. It is basically like a Unix "find" command piped to the "jar" command that would "grep" for the class name. Cross-platform issues made it easier to put this into a small java application rather than have to install Cygwin on every Windows box I use.
+I have implemented as a generic command line tool which assuming the relative path of the location of the data files.
 
 Downloads
 ClassFinder can be downloaded from:
 
-https://github.com/stdunbar/classfinder
+https://github.com/terapaks/CommandLine
 In here you'll find the build file and source code.
 
 A sample command line might look like (should be all on one line):
@@ -21,10 +21,8 @@ or
 java -jar lib/classfinder.jar -d some/directory/name -c SomeClassName
 
 Command line arguments
--d specifies the directory name to use. This must be a directory. This is a required argument.
--c specifies the class name to look for in the jar files. The search is case insensitive unless you specify the -p option. This is a required argument. Note that this argument can be a class name like MyClassName in which case ClassFinder will look for the provided name regardless of the package. Alternately, you can specify a package declaration like com.xigole.MyClassName. Either way ClassFinder is simply looking for a pattern that looks like the given string. Regular expressions are not supported.
--p pay attention to the class name case. This makes it easier to find something like "Log" when many classes may be in the "logging" package
--v an optional argument that verbosely prints out each file that is being searched.
+-o operation which will be either weather or football
+
 Building
 ClassFinder uses a standard Maven build file. Just run
 
@@ -33,4 +31,4 @@ mvn package
 to generate classfinder.jar
 
 Copyright
-Copyright (C) 2004-2017 Scott Dunbar (scott@xigole.com)
+Copyright (C) 2021 Steve Terapak (steve@terapak.com)
