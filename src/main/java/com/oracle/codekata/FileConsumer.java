@@ -3,14 +3,24 @@ package com.oracle.codekata;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.oracle.codekata.data.Operations;
 import com.oracle.codekata.data.WeatherData;
 import com.oracle.codekata.data.Data;
 import com.oracle.codekata.utils.NumberUtils;
 
 
 public class FileConsumer {
-    public ArrayList<Data> ReadFile(String inVal) {
+    public ArrayList<Data> ReadFile(Operations inOper) {
         ArrayList<Data> wdLIst = new ArrayList<>();
+        String path = "";
+
+        if(inOper==Operations.WEATHER){
+            path=Data.WEATHER_FILE;
+        }
+        else if(inOper==Operations.FOOTBALL){
+            path=Data.FOOTBALL_FILE;
+        }
 
         try {
             // pass the path to the file as a parameter
@@ -40,6 +50,11 @@ public class FileConsumer {
 
         } catch (Exception e) {
             System.out.println("!!!!!!!!!!EXCEPTION:" + e.getMessage());
+        }
+
+        if(wdLIst.isEmpty()){
+            System.out.println(Data.READ_FILE_FAILED);
+            System.exit(0);
         }
 
         return wdLIst;

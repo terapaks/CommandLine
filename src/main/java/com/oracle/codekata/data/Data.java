@@ -30,5 +30,6 @@ public abstract class Data {
     public final static String FOOTBALL_FILE="/data/football.dat";
 
     public final static String COMMAND_LINE_ERROR= "Please specify the operation we are executing.  Current values would include weather or football.";
+    public final static String READ_FILE_FAILED= "FILE read failed.";
 
 }

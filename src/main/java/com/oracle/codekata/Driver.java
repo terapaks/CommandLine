@@ -1,14 +1,17 @@
 package com.oracle.codekata;
 import com.oracle.codekata.data.Data;
+import com.oracle.codekata.data.Operations;
 import com.oracle.codekata.utils.NumberUtils;
 import java.util.ArrayList;
 
 public class Driver{
     static public void main(String[] args) {
 
+        Operations oper = Operations.UNKNOWNN;
+
         FileConsumer fc = new FileConsumer();
         ArrayList<Data> dList = new ArrayList<>();
-        String val = new String("");
+        String val = "";
 
         if(args.length == 0){
             System.out.println(Data.COMMAND_LINE_ERROR);
@@ -18,10 +21,10 @@ public class Driver{
             val = args[0];
 
             if(val.equals(Data.WEATHER_COMMAND_LINE) ){
-                dList = fc.ReadFile(Data.WEATHER_FILE);
+                oper=Operations.WEATHER;
             }
             else if(val.equals(Data.FOOTBALL_COMMAND_LINE)){
-                dList = fc.ReadFile(Data.FOOTBALL_FILE);
+                oper=Operations.FOOTBALL;
             }
             else {
                 System.out.println(Data.COMMAND_LINE_ERROR);
@@ -30,22 +33,9 @@ public class Driver{
 
         }
 
-        if(dList.size() == 0){
-            System.out.println("File read failed.");
-            System.exit(0);
-        }
+        dList = fc.ReadFile(oper);
 
-        if(val.equals(Data.WEATHER_COMMAND_LINE) ){
-            NumberUtils.PrintSmallestDayVariance(dList);
-        }
-        else if(val.equals(Data.FOOTBALL_COMMAND_LINE)){
-            NumberUtils.PrintSmallestDayVariance(dList);
-        }
-        else {
-            System.out.println(Data.COMMAND_LINE_ERROR);
-            System.exit(0);
-        }
-
+        NumberUtils.PrintResult(dList, oper);
 
     }
 
