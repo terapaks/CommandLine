@@ -4,28 +4,18 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.oracle.codekata.data.Operations;
-import com.oracle.codekata.data.WeatherData;
 import com.oracle.codekata.data.Data;
 
 
 public abstract class FileConsumer {
-    protected Operations _operation;
+    protected String _path;
 
     public ArrayList<Data> ReadFile() {
         ArrayList<Data> dataLIst = new ArrayList<>();
-        String path = "";
-
-        if(_operation==Operations.WEATHER){
-            path=Data.WEATHER_FILE;
-        }
-        else if(_operation==Operations.FOOTBALL){
-            path=Data.FOOTBALL_FILE;
-        }
 
         try {
             File file =
-                    new File(path);
+                    new File(_path);
             Scanner sc = new Scanner(file);
 
             while (sc.hasNextLine()) {

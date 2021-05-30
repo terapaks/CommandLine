@@ -1,13 +1,12 @@
 package com.oracle.codekata.files;
 
 import com.oracle.codekata.data.Data;
-import com.oracle.codekata.data.Operations;
 import com.oracle.codekata.data.WeatherData;
 import com.oracle.codekata.utils.NumberUtils;
 
 public class WeatherFileConsumer extends FileConsumer {
     public WeatherFileConsumer() {
-        _operation=Operations.WEATHER;
+        _path=Data.WEATHER_FILE;
     }
 
     @Override

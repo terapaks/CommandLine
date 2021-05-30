@@ -1,10 +1,5 @@
 package com.oracle.codekata.utils;
 
-import com.oracle.codekata.data.Operations;
-import com.oracle.codekata.data.WeatherData;
-import com.oracle.codekata.data.Data;
-import java.util.ArrayList;
-
 public class NumberUtils {
     public static Boolean IsNumber(String inStr){
         //should turn into function

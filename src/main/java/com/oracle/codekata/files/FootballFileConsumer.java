@@ -4,11 +4,9 @@ import com.oracle.codekata.data.Data;
 import com.oracle.codekata.data.FootballData;
 import com.oracle.codekata.utils.NumberUtils;
 
-import static com.oracle.codekata.data.Operations.FOOTBALL;
-
 public class FootballFileConsumer extends FileConsumer {
     public FootballFileConsumer() {
-        _operation= FOOTBALL;
+        _path=Data.FOOTBALL_FILE;;
     }
 
     @Override
