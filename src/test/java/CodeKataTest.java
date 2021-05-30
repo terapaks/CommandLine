@@ -29,7 +29,7 @@ class CodeKataTest {
             Assertions.assertTrue(dList.size()>0);
 
             PrintResults pc = new WeatherPrintResults();
-            pc.PrintDetails(dList);
+            pc.PrintResult(dList);
         }
         catch(Exception e){
             Assertions.fail();
@@ -45,7 +45,7 @@ class CodeKataTest {
             Assertions.assertTrue(dList.size()>0);
 
             PrintResults pc = new FootballPrintResults();
-            pc.PrintDetails(dList);
+            pc.PrintResult(dList);
         }
         catch(Exception e){
             Assertions.fail();
