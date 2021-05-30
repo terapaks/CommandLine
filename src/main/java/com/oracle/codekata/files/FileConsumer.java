@@ -2,6 +2,8 @@ package com.oracle.codekata.files;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 
 import com.oracle.codekata.data.Data;
@@ -23,8 +25,11 @@ public abstract class FileConsumer {
 
                 Data data = ParseLine(curStr);
 
-                if(data!=null)
+                if(data!=null){
+                    data.setCreationDate(Calendar.getInstance().getTime());
                     dataLIst.add(data);
+                }
+
 
                 //System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", wd.day, wd.variance);
             }
