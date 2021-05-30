@@ -1,23 +1,23 @@
 package com.oracle.codekata.data;
 
 public class FootballData extends Data {
-    public int getGoalsFor() {
-        return GoalsFor;
+    public String getTeamName() {
+        return teamName;
     }
 
-    public void setGoalsFor(int goalsFor) {
-        this.GoalsFor = goalsFor;
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
     }
 
-    private int GoalsFor;
+    private String teamName;
 
-    public int getGoalsAgainst() {
-        return GoalsAgainst;
+    public int getVariance() {
+        return variance;
     }
 
-    public void setGoalsAgainst(int goalsAgainst) {
-        this.GoalsAgainst = goalsAgainst;
+    public void setVariance(int variance) {
+        this.variance = variance;
     }
 
-    private int GoalsAgainst;
+    private int variance;
 }

@@ -18,9 +18,10 @@ public class NumberUtils {
         return true;
     }
 
-    public static String CleanString(String inStr){
-        var str =  inStr.replace('*', ' ');
-        return str.trim();
+    public static String CleanData(String inStr){
+        String str =  inStr.replace('*', ' ');
+        String cleanStr =  str.replace('.', ' ');
+        return cleanStr.trim();
 
     }
 

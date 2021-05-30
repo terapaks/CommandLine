@@ -7,14 +7,8 @@ import com.oracle.codekata.data.WeatherData;
 import java.util.ArrayList;
 
 public abstract class PrintResults {
-    public void PrintResult(ArrayList<Data> inList, Operations inOper){
-        if(inOper==Operations.WEATHER){
-            PrintDetails(inList);
-        }
-        else if(inOper==Operations.FOOTBALL){
-            //TODO Finish the implementation
-        }
-
+    public void PrintResult(ArrayList<Data> inList){
+        PrintDetails(inList);
     }
 
     public void PrintDetails(ArrayList<Data> inList){

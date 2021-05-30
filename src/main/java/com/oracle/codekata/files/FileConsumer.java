@@ -37,12 +37,7 @@ public abstract class FileConsumer {
                     dataLIst.add(data);
 
                 //System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", wd.day, wd.variance);
-
-
             }
-
-
-
         } catch (Exception e) {
             System.out.println("FILE READ EXCEPTION: " + e.getMessage());
         }

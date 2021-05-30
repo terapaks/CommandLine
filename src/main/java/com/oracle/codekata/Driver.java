@@ -1,7 +1,9 @@
 package com.oracle.codekata;
 import com.oracle.codekata.data.Data;
 import com.oracle.codekata.files.FileConsumer;
+import com.oracle.codekata.files.FootballFileConsumer;
 import com.oracle.codekata.files.WeatherFileConsumer;
+import com.oracle.codekata.print.FootballPrintResults;
 import com.oracle.codekata.print.PrintResults;
 import com.oracle.codekata.data.Operations;
 import com.oracle.codekata.print.WeatherPrintResults;
@@ -33,8 +35,8 @@ public class Driver{
             }
             else if(val.equals(Data.FOOTBALL_COMMAND_LINE)){
                 oper=Operations.FOOTBALL;
-                fc = new WeatherFileConsumer();
-                pr = new WeatherPrintResults();
+                fc = new FootballFileConsumer();
+                pr = new FootballPrintResults();
             }
             else {
                 System.out.println(Data.COMMAND_LINE_ERROR);
@@ -46,7 +48,7 @@ public class Driver{
         if(fc!=null){
             dList = fc.ReadFile();
 
-            pr.PrintResult(dList, oper);
+            pr.PrintResult(dList);
         }
 
 
