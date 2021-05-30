@@ -6,7 +6,7 @@ import com.oracle.codekata.utils.NumberUtils;
 
 public class FootballFileConsumer extends FileConsumer {
     public FootballFileConsumer() {
-        _path=Data.FOOTBALL_FILE;;
+        _path=Data.FOOTBALL_FILE;
     }
 
     @Override

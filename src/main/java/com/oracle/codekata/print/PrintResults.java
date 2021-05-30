@@ -9,7 +9,5 @@ public abstract class PrintResults {
         PrintDetails(inList);
     }
 
-    public void PrintDetails(ArrayList<Data> inList){
-
-    }
+    abstract public void PrintDetails(ArrayList<Data> inList);
 }

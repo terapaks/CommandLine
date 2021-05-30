@@ -3,7 +3,6 @@ package com.oracle.codekata.files;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 
 import com.oracle.codekata.data.Data;
@@ -45,7 +44,5 @@ public abstract class FileConsumer {
         return dataLIst;
     }
 
-    public Data ParseLine(String inStr){
-        return null;
-    }
+    abstract public Data ParseLine(String inStr);
 }
