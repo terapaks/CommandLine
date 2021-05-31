@@ -3,21 +3,21 @@ package com.oracle.codekata.data;
 import java.util.Date;
 
 public abstract class Data {
-    public Date get_creationDate() {
+    public Date getCreationDate() {
         return _creationDate;
     }
 
-    public void set_creationDate(Date _creationDate) {
+    public void setCreationDate(Date _creationDate) {
         this._creationDate = _creationDate;
     }
 
     private Date _creationDate;
 
-    public Date get_updateDate() {
+    public Date getUpdateDate() {
         return _updateDate;
     }
 
-    public void set_updateDate(Date _updateDate) {
+    public void setUpdateDate(Date _updateDate) {
         this._updateDate = _updateDate;
     }
 

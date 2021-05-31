@@ -25,7 +25,7 @@ public abstract class FileConsumer {
                 Data data = ParseLine(curStr);
 
                 if(data!=null){
-                    data.set_creationDate(Calendar.getInstance().getTime());
+                    data.setCreationDate(Calendar.getInstance().getTime());
                     dataLIst.add(data);
                 }
 
