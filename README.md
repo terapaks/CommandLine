@@ -28,11 +28,11 @@ gradle run --args='football' --read and output results from football file analys
 
 To what extent did the design decisions you made when writing the original programs make it easier or harder to factor out common code?
 
-    2nd file was very fast as everything was most of the way completed minus the line parsing and some details 
+    2nd file was very fast as everything was mostly out of the way completed minus the line parsing and some details 
 
 Was the way you wrote the second program influenced by writing the first?
 
-    Yea it was a plugin into a framework.  If we had more could just plug-in the data, constnts, line-parsing, and output analysis and you are done.
+    Yea it was a plugin into a framework.  If we had more could just plug-in the data, constants, line-parsing, and output analysis and you are done.
 
 Is factoring out as much common code as possible always a good thing? Did the readability of the programs suffer because of this requirement? How about the maintainability?
     
