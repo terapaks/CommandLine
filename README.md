@@ -7,10 +7,11 @@ It will print out the results as specified in the coding kata exercise:  http://
 I have implemented as a generic command line tool which assuming the relative path of the location of the data files.
 
 Downloads
-ClassFinder can be downloaded from:
+CommandLine can be downloaded from:
 
 https://github.com/terapaks/CommandLine
-In here you'll find the build file and source code.
+
+In here you'll find the build file and source code.  I am using gradle and it can built using 'gradle build'.
 
 A sample command line might look like (should be all on one line):
 
