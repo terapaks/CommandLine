@@ -2,7 +2,6 @@ package com.oracle.codekata.print;
 
 import com.oracle.codekata.data.Data;
 import com.oracle.codekata.data.FootballData;
-import com.oracle.codekata.data.WeatherData;
 
 import java.util.ArrayList;
 

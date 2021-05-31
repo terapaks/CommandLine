@@ -2,24 +2,24 @@ package com.oracle.codekata.data;
 
 public class FootballData extends Data {
     public String getTeamName() {
-        return teamName;
+        return _teamName;
     }
 
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
+    public void setTeamName(String _teamName) {
+        this._teamName = _teamName;
     }
 
-    private String teamName;
+    private String _teamName;
 
     public int getVariance() {
-        return variance;
+        return _variance;
     }
 
-    public void setVariance(int variance) {
-        this.variance = variance;
+    public void setVariance(int _variance) {
+        this._variance = _variance;
     }
 
-    private int variance;
+    private int _variance;
 
     public final static int TEAM_NAME_FIELD=1;
     public final static int GOALS_FOR_FIELD=6;

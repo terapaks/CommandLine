@@ -3,25 +3,25 @@ package com.oracle.codekata.data;
 import java.util.Date;
 
 public abstract class Data {
-    public Date getCreationDate() {
-        return creationDate;
+    public Date get_creationDate() {
+        return _creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
-        this.creationDate = creationDate;
+    public void set_creationDate(Date _creationDate) {
+        this._creationDate = _creationDate;
     }
 
-    public Date creationDate;
+    private Date _creationDate;
 
-    public Date getUpdateDate() {
-        return updateDate;
+    public Date get_updateDate() {
+        return _updateDate;
     }
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
+    public void set_updateDate(Date _updateDate) {
+        this._updateDate = _updateDate;
     }
 
-    public Date updateDate;
+    private Date _updateDate;
 
     public final static String WEATHER_COMMAND_LINE="weather";
     public final static String FOOTBALL_COMMAND_LINE="football";

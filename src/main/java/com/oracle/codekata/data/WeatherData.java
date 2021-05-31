@@ -2,24 +2,24 @@ package com.oracle.codekata.data;
 
 public class WeatherData extends Data {
     public String getDay() {
-        return day;
+        return _day;
     }
 
-    public void setDay(String day) {
-        this.day = day;
+    public void setDay(String _day) {
+        this._day = _day;
     }
 
-    private String day;
+    private String _day;
 
     public int getVariance() {
-        return variance;
+        return _variance;
     }
 
-    public void setVariance(int variance) {
-        this.variance = variance;
+    public void setVariance(int _variance) {
+        this._variance = _variance;
     }
 
-    private int variance;
+    private int _variance;
 
     public final static int DAY_FIELD=0;
     public final static int MAX_TEMP_FIELD=1;
