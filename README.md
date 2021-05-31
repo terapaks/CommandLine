@@ -28,7 +28,7 @@ gradle run --args='football' --read and output results from football file analys
 
 To what extent did the design decisions you made when writing the original programs make it easier or harder to factor out common code?
 
-    2nd file was very fast as everything was mostly out of the way completed minus the line parsing and some details 
+    The way I write code is to hack out a solution as quick as possible nd then refactor.  Just a metter of thinking about creating a framework.  A little tough with using Java as not my native language but all very similar.
 
 Was the way you wrote the second program influenced by writing the first?
 
