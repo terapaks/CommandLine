@@ -11,25 +11,16 @@ CommandLine can be downloaded from:
 
 https://github.com/terapaks/CommandLine
 
-In here you'll find the build file and source code.  I am using gradle and it can built using 'gradle build'.
+In here you'll find the build file and source code.   I am using gradle.
 
-A sample command line might look like (should be all on one line):
+Quick and dirty to download and run the application would be the following:
 
-java -classpath lib/classfinder.jar com.xigole.util.ClassFinder -d some/directory/name -c SomeClassName
+git clone https://github.com/terapaks/CommandLine
 
-or
+Go into the directory and run the following to complete build and run:
 
-java -jar lib/classfinder.jar -d some/directory/name -c SomeClassName
-
-Command line arguments
--o operation which will be either weather or football
-
-Building
-ClassFinder uses a standard Maven build file. Just run
-
-mvn package
-
-to generate classfinder.jar
+gradle run --args='weather' --read and output results from weather file analysis
+gradle run --args='football' --read and output results from football file analysis
 
 Copyright
 Copyright (C) 2021 Steve Terapak (steve@terapak.com)
