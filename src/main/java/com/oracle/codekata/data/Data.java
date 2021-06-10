@@ -23,13 +23,13 @@ public abstract class Data {
 
     private Date _updateDate;
 
-    public final static String WEATHER_COMMAND_LINE="weather";
-    public final static String FOOTBALL_COMMAND_LINE="football";
+    public final static String WEATHER_COMMAND_LINE = "weather";
+    public final static String FOOTBALL_COMMAND_LINE = "football";
 
-    public final static String WEATHER_FILE="data/weather.dat";
-    public final static String FOOTBALL_FILE="data/football.dat";
+    public final static String WEATHER_FILE = "data/weather.dat";
+    public final static String FOOTBALL_FILE = "data/football.dat";
 
-    public final static String COMMAND_LINE_ERROR= "Please specify the operation we are executing.  Current values would include weather or football.";
-    public final static String READ_FILE_FAILED= "FILE read failed.";
+    public final static String COMMAND_LINE_ERROR = "Please specify the operation we are executing.  Current values would include weather or football.";
+    public final static String READ_FILE_FAILED = "FILE read failed.";
 
 }

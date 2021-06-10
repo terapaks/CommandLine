@@ -21,7 +21,7 @@ public class WeatherData extends Data {
 
     private int _variance;
 
-    public final static int DAY_FIELD=0;
-    public final static int MAX_TEMP_FIELD=1;
-    public final static int MIN_TEMP_FIELD=2;
+    public final static int DAY_FIELD = 0;
+    public final static int MAX_TEMP_FIELD = 1;
+    public final static int MIN_TEMP_FIELD = 2;
 }

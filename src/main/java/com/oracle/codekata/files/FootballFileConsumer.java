@@ -6,11 +6,11 @@ import com.oracle.codekata.utils.NumberUtils;
 
 public class FootballFileConsumer extends FileConsumer {
     public FootballFileConsumer() {
-        _path=Data.FOOTBALL_FILE;
+        _path = Data.FOOTBALL_FILE;
     }
 
     @Override
-    public Data ParseLine(String inStr){
+    public Data ParseLine(String inStr) {
         FootballData fd = new FootballData();
 
         String[] splitStr = inStr.trim().split("\\s+");

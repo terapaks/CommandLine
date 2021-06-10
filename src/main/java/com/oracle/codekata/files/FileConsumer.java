@@ -24,7 +24,7 @@ public abstract class FileConsumer {
 
                 Data data = ParseLine(curStr);
 
-                if(data!=null){
+                if (data != null) {
                     data.setCreationDate(Calendar.getInstance().getTime());
                     dataLIst.add(data);
                 }
@@ -36,7 +36,7 @@ public abstract class FileConsumer {
             System.out.println("FILE READ EXCEPTION: " + e.getMessage());
         }
 
-        if(dataLIst.isEmpty()){
+        if (dataLIst.isEmpty()) {
             System.out.println(Data.READ_FILE_FAILED);
             System.exit(0);
         }

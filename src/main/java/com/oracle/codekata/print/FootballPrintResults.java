@@ -10,14 +10,14 @@ public class FootballPrintResults extends PrintResults {
     public void PrintDetails(ArrayList<Data> inList) {
 
         FootballData fd = (FootballData) inList.get(0);
-        int variance =  fd.getVariance();
+        int variance = fd.getVariance();
         String teamName = "";
 
         for (Data curData : inList) {
 
             FootballData curFD = (FootballData) curData;
             int curVariance = curFD.getVariance();
-            if(curVariance >= 0 && curVariance < variance) {
+            if (curVariance >= 0 && curVariance < variance) {
                 variance = curVariance;
                 teamName = curFD.getTeamName();
             }

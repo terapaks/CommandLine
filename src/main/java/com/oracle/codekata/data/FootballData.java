@@ -21,7 +21,7 @@ public class FootballData extends Data {
 
     private int _variance;
 
-    public final static int TEAM_NAME_FIELD=1;
-    public final static int GOALS_FOR_FIELD=6;
-    public final static int GOALS_AGAINST_FIELD=8;
+    public final static int TEAM_NAME_FIELD = 1;
+    public final static int GOALS_FOR_FIELD = 6;
+    public final static int GOALS_AGAINST_FIELD = 8;
 }

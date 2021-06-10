@@ -9,14 +9,14 @@ public class WeatherPrintResults extends PrintResults {
     @Override
     public void PrintDetails(ArrayList<Data> inList) {
 
-        WeatherData wd = (WeatherData)inList.get(0);
-        int variance =  wd.getVariance();
+        WeatherData wd = (WeatherData) inList.get(0);
+        int variance = wd.getVariance();
         String day = "";
 
         for (Data curData : inList) {
 
             WeatherData curWD = (WeatherData) curData;
-            if(curWD.getVariance() < variance) {
+            if (curWD.getVariance() < variance) {
                 variance = curWD.getVariance();
                 day = curWD.getDay();
             }

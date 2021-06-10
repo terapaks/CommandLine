@@ -5,7 +5,7 @@ import com.oracle.codekata.data.Data;
 import java.util.ArrayList;
 
 public abstract class PrintResults {
-    public void PrintResult(ArrayList<Data> inList){
+    public void PrintResult(ArrayList<Data> inList) {
         PrintDetails(inList);
     }
 
