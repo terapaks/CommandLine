@@ -23,6 +23,6 @@ public class FootballPrintResults extends PrintResults {
             }
         }
 
-        System.out.printf("The team with the least goal variance was %s and the value was %s..", teamName, variance);
+        System.out.printf("The team with the least goal variance was %s and the value was %s..\n", teamName, variance);
     }
 }

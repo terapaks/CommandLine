@@ -22,6 +22,6 @@ public class WeatherPrintResults extends PrintResults {
             }
         }
 
-        System.out.printf("The day with the least temperature variance was %s and the value was %s..", day, variance);
+        System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", day, variance);
     }
 }

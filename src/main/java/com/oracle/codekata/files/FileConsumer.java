@@ -1,11 +1,11 @@
 package com.oracle.codekata.files;
 
+import com.oracle.codekata.data.Data;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
-
-import com.oracle.codekata.data.Data;
 
 
 public abstract class FileConsumer {
