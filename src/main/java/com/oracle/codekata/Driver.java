@@ -16,10 +16,6 @@ public class Driver {
         try{
             ExecuteCommandline(args);
         }
-        catch (IllegalArgumentException e){
-            System.out.println(e.getMessage());
-            System.exit(0);
-        }
         catch (Exception e){
             System.out.println(e.getMessage());
             System.exit(0);
