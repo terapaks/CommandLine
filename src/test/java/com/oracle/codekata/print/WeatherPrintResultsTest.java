@@ -18,8 +18,8 @@ class WeatherPrintResultsTest {
         WeatherPrintResults wp = new WeatherPrintResults();
         wp.GetDetails(dList);
 
-        assertNotSame("", wp.getDay());
-        Assertions.assertTrue(wp.getVariance()!=0);
+        assertNotSame(null, wp.getDay());
+        assertNotSame(0, wp.getVariance());
 
     }
 

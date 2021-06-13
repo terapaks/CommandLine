@@ -18,8 +18,8 @@ class FootballPrintResultsTest{
             FootballPrintResults fp = new FootballPrintResults();
             fp.GetDetails(dList);
 
-            assertNotSame("", fp.getTeamName());
-            Assertions.assertTrue(fp.getVariance()!=0);
+            assertNotSame(null, fp.getTeamName());
+            assertNotSame(0, fp.getVariance());
         }
 
 }
