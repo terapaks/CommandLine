@@ -9,6 +9,13 @@ public class FootballPrintResults extends PrintResults {
     @Override
     public void PrintDetails(ArrayList<Data> inList) {
 
+        GetDetails(inList);
+
+        System.out.printf("The team with the least goal variance was %s and the value was %s..\n", getTeamName(), getVariance());
+    }
+
+    @Override
+    public void GetDetails(ArrayList<Data> inList){
         FootballData fd = (FootballData) inList.get(0);
         int variance = fd.getVariance();
         String teamName = "";
@@ -18,11 +25,31 @@ public class FootballPrintResults extends PrintResults {
             FootballData curFD = (FootballData) curData;
             int curVariance = curFD.getVariance();
             if (curVariance >= 0 && curVariance < variance) {
-                variance = curVariance;
-                teamName = curFD.getTeamName();
+                setVariance(curVariance);
+                setTeamName(curFD.getTeamName());
             }
         }
 
-        System.out.printf("The team with the least goal variance was %s and the value was %s..\n", teamName, variance);
     }
+
+    public int getVariance() {
+        return _variance;
+    }
+
+    public void setVariance(int inVariance) {
+        this._variance = inVariance;
+    }
+
+    private int _variance;
+
+    public String getTeamName() {
+        return _teamName;
+    }
+
+    public void setTeamName(String inTeamName) {
+        this._teamName = inTeamName;
+    }
+
+    private String _teamName;
+
 }

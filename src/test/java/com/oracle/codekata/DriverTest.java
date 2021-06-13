@@ -22,12 +22,29 @@ class DriverTest {
     }
 
     @Test
-    void Main_Negative() {
+    void Main_NegativeInvalid() {
 
         String[] cmdLine = {"BLEH"};
 
         try{
-            Driver.main(cmdLine);
+            Driver.ExecuteCommandline(cmdLine);
+            Assertions.fail("Exception expected..."); //should not make it here
+        }
+        catch (IllegalArgumentException e){
+            Assertions.assertTrue(true);
+        }
+        catch (Exception e){
+            Assertions.fail("Wrong exception thrown.");
+        }
+    }
+
+    @Test
+    void Main_NegativeEmpty() {
+
+        String[] cmdLine = {""};
+
+        try{
+            Driver.ExecuteCommandline(cmdLine);
             Assertions.fail("Exception expected..."); //should not make it here
         }
         catch (IllegalArgumentException e){

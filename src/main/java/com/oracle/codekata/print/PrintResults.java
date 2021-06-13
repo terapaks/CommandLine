@@ -10,4 +10,6 @@ public abstract class PrintResults {
     }
 
     abstract public void PrintDetails(ArrayList<Data> inList);
+
+    abstract public void GetDetails(ArrayList<Data> inList);
 }
