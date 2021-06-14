@@ -1,7 +1,7 @@
-com/oracle/codekata/print/WeatherPrintResults.java
- com.oracle.codekata.print.WeatherPrintResults
-com/oracle/codekata/print/PrintResultsFactory.java
- com.oracle.codekata.print.PrintResultsFactory
+com/oracle/codekata/data/FootballData.java
+ com.oracle.codekata.data.FootballData
+com/oracle/codekata/files/FileConsumerFactory.java
+ com.oracle.codekata.files.FileConsumerFactory
 com/oracle/codekata/data/WeatherData.java
  com.oracle.codekata.data.WeatherData
 com/oracle/codekata/files/FileConsumer.java
@@ -21,7 +21,7 @@ com/oracle/codekata/data/Data.java
  com.oracle.codekata.data.Data
 com/oracle/codekata/print/FootballPrintResults.java
  com.oracle.codekata.print.FootballPrintResults
-com/oracle/codekata/files/FileConsumerFactory.java
- com.oracle.codekata.files.FileConsumerFactory
-com/oracle/codekata/data/FootballData.java
- com.oracle.codekata.data.FootballData
+com/oracle/codekata/print/WeatherPrintResults.java
+ com.oracle.codekata.print.WeatherPrintResults
+com/oracle/codekata/print/PrintResultsFactory.java
+ com.oracle.codekata.print.PrintResultsFactory

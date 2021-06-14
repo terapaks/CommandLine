@@ -8,8 +8,7 @@ import java.util.ArrayList;
 public class WeatherPrintResults extends PrintResults {
     @Override
     public void PrintDetails(ArrayList<Data> inList) {
-
-
+        GetDetails(inList);
 
         System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", getDay(), getVariance());
     }
