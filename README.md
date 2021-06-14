@@ -19,6 +19,8 @@ git clone https://github.com/terapaks/CommandLine
 
 Go into the directory and run the following to complete build and run:
 
+gradle test --run unit tests
+
 gradle run --args='weather' --read and output results from weather file analysis
 
 gradle run --args='football' --read and output results from football file analysis
