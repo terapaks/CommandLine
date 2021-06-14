@@ -18,10 +18,10 @@ public class WeatherFileConsumer extends FileConsumer {
         if (!NumberUtils.IsNumber(splitStr[0]))
             return null;
 
-        wd.setDay(splitStr[WeatherData.DAY_FIELD]);
+        wd.SetDay(splitStr[WeatherData.DAY_FIELD]);
         int max = Integer.parseInt(NumberUtils.CleanData(splitStr[WeatherData.MAX_TEMP_FIELD]));
         int min = Integer.parseInt(NumberUtils.CleanData(splitStr[WeatherData.MIN_TEMP_FIELD]));
-        wd.setVariance(max - min);
+        wd.SetVariance(max - min);
 
         return wd;
     }

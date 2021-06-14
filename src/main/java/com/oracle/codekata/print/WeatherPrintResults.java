@@ -7,43 +7,41 @@ import java.util.ArrayList;
 
 public class WeatherPrintResults extends PrintResults {
     @Override
-    public void PrintDetails(ArrayList<Data> inList) {
-        GetDetails(inList);
-
-        System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", getDay(), getVariance());
+    public void PrintDetails() {
+        System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", GetDay(), GetVariance());
     }
 
     @Override
     public void GetDetails(ArrayList<Data> inList) {
         WeatherData wd = (WeatherData) inList.get(0);
-        int variance = wd.getVariance();
+        int variance = wd.GetVariance();
         String day = "";
 
         for (Data curData : inList) {
 
             WeatherData curWD = (WeatherData) curData;
-            if (curWD.getVariance() < variance) {
-                setVariance(curWD.getVariance());
-                setDay(curWD.getDay());
+            if (curWD.GetVariance() < variance) {
+                SetVariance(curWD.GetVariance());
+                SetDay(curWD.GetDay());
             }
         }
     }
 
-    public String getDay() {
+    public String GetDay() {
         return _day;
     }
 
-    public void setDay(String inDay) {
+    public void SetDay(String inDay) {
         this._day = inDay;
     }
 
     private String _day;
 
-    public int getVariance() {
+    public int GetVariance() {
         return _variance;
     }
 
-    public void setVariance(int inVariance) {
+    public void SetVariance(int inVariance) {
         this._variance = inVariance;
     }
 

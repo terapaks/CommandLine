@@ -20,7 +20,8 @@ class WeatherFileConsumerTest {
             Assertions.assertTrue(dList.size()>0);
 
             PrintResults pc = new WeatherPrintResults();
-            pc.PrintResult(dList);
+            pc.GetDetails(dList);
+            pc.PrintResult();
         }
         catch(Exception e){
             Assertions.fail();

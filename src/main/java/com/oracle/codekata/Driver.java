@@ -40,8 +40,8 @@ public class Driver {
             FileConsumerFactory fcFactory = new FileConsumerFactory();
             PrintResultsFactory prFactory = new PrintResultsFactory();
 
-            fc = fcFactory.createFileConsumer(operation);
-            pr = prFactory.createPrintResults(operation);
+            fc = fcFactory.CreateFileConsumer(operation);
+            pr = prFactory.CreatePrintResults(operation);
 
             if (fc == null || pr == null) {
                 throw new Exception("Unknown error occurred for operation processing");
@@ -49,8 +49,8 @@ public class Driver {
         }
 
         dList = fc.ReadFile();
-
-        pr.PrintResult(dList);
+        pr.GetDetails(dList);
+        pr.PrintResult();
     }
 
     public static eOperation ValidateCmdLine(String inCmdLine){

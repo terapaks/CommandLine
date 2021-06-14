@@ -5,7 +5,7 @@ import com.oracle.codekata.Driver.eOperation;
 
 public class PrintResultsFactory {
 
-    public PrintResults createPrintResults(eOperation inOperation)
+    public PrintResults CreatePrintResults(eOperation inOperation)
     {
         if (inOperation.equals(eOperation.WEATHER)) {
             return new WeatherPrintResults();

@@ -1,6 +1,5 @@
 package com.oracle.codekata.print;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import com.oracle.codekata.files.FootballFileConsumer;
 import com.oracle.codekata.data.Data;
@@ -18,8 +17,8 @@ class FootballPrintResultsTest{
             FootballPrintResults fp = new FootballPrintResults();
             fp.GetDetails(dList);
 
-            assertNotSame(null, fp.getTeamName());
-            assertNotSame(0, fp.getVariance());
+            assertNotSame(null, fp.GetTeamName());
+            assertNotSame(0, fp.GetVariance());
         }
 
 }

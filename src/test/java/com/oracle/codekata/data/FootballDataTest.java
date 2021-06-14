@@ -1,6 +1,5 @@
 package com.oracle.codekata.data;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -12,17 +11,17 @@ class FootballDataTest {
     @Test
     void TeamName_Positive() {
         FootballData fd = new FootballData();
-        fd.setTeamName("TEST");
+        fd.SetTeamName("TEST");
 
-        assertSame("TEST", fd.getTeamName());
+        assertSame("TEST", fd.GetTeamName());
     }
 
     @Test
     void Variance_Positive() {
         FootballData fd = new FootballData();
-        fd.setVariance(6);
+        fd.GetVariance(6);
 
-        assertEquals(6, fd.getVariance());
+        assertEquals(6, fd.GetVariance());
 
     }
 
@@ -32,12 +31,12 @@ class FootballDataTest {
         Date curDateTime = new Date();
 
         FootballData fd = new FootballData();
-        fd.setCreationDate(curDateTime);
+        fd.SetCreationDate(curDateTime);
 
-        assertSame(fd.getCreationDate(), curDateTime);
+        assertSame(fd.GetCreationDate(), curDateTime);
 
-        fd.setUpdateDate(curDateTime);
-        assertSame(fd.getUpdateDate(), curDateTime);
+        fd.SetUpdateDate(curDateTime);
+        assertSame(fd.GetUpdateDate(), curDateTime);
 
     }
 }

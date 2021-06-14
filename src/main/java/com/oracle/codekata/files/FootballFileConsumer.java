@@ -18,10 +18,10 @@ public class FootballFileConsumer extends FileConsumer {
         if (!NumberUtils.IsNumber(NumberUtils.CleanData(splitStr[0])))
             return null;
 
-        fd.setTeamName(splitStr[FootballData.TEAM_NAME_FIELD]);
+        fd.SetTeamName(splitStr[FootballData.TEAM_NAME_FIELD]);
         int goalsFor = Integer.parseInt(NumberUtils.CleanData(splitStr[FootballData.GOALS_FOR_FIELD]));
         int goalsAgainst = Integer.parseInt(NumberUtils.CleanData(splitStr[FootballData.GOALS_AGAINST_FIELD]));
-        fd.setVariance(goalsFor - goalsAgainst);
+        fd.GetVariance(goalsFor - goalsAgainst);
 
         return fd;
     }

@@ -7,19 +7,19 @@ public class FootballData extends Data {
     private String _teamName;
     private int _variance;
 
-    public String getTeamName() {
+    public String GetTeamName() {
         return _teamName;
     }
 
-    public void setTeamName(String _teamName) {
+    public void SetTeamName(String _teamName) {
         this._teamName = _teamName;
     }
 
-    public int getVariance() {
+    public int GetVariance() {
         return _variance;
     }
 
-    public void setVariance(int _variance) {
+    public void GetVariance(int _variance) {
         this._variance = _variance;
     }
 }

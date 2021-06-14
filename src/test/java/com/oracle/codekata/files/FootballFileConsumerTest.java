@@ -20,7 +20,8 @@ class FootballFileConsumerTest {
             Assertions.assertTrue(dList.size()>0);
 
             PrintResults pc = new FootballPrintResults();
-            pc.PrintResult(dList);
+            pc.GetDetails(dList);
+            pc.PrintResult();
         }
         catch(Exception e){
             Assertions.fail();

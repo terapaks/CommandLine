@@ -7,46 +7,43 @@ import java.util.ArrayList;
 
 public class FootballPrintResults extends PrintResults {
     @Override
-    public void PrintDetails(ArrayList<Data> inList) {
-
-        GetDetails(inList);
-
-        System.out.printf("The team with the least goal variance was %s and the value was %s..\n", getTeamName(), getVariance());
+    public void PrintDetails() {
+        System.out.printf("The team with the least goal variance was %s and the value was %s..\n", GetTeamName(), GetVariance());
     }
 
     @Override
     public void GetDetails(ArrayList<Data> inList){
         FootballData fd = (FootballData) inList.get(0);
-        int variance = fd.getVariance();
+        int variance = fd.GetVariance();
         String teamName = "";
 
         for (Data curData : inList) {
 
             FootballData curFD = (FootballData) curData;
-            int curVariance = curFD.getVariance();
+            int curVariance = curFD.GetVariance();
             if (curVariance >= 0 && curVariance < variance) {
-                setVariance(curVariance);
-                setTeamName(curFD.getTeamName());
+                SetVariance(curVariance);
+                SetTeamName(curFD.GetTeamName());
             }
         }
 
     }
 
-    public int getVariance() {
+    public int GetVariance() {
         return _variance;
     }
 
-    public void setVariance(int inVariance) {
+    public void SetVariance(int inVariance) {
         this._variance = inVariance;
     }
 
     private int _variance;
 
-    public String getTeamName() {
+    public String GetTeamName() {
         return _teamName;
     }
 
-    public void setTeamName(String inTeamName) {
+    public void SetTeamName(String inTeamName) {
         this._teamName = inTeamName;
     }
 

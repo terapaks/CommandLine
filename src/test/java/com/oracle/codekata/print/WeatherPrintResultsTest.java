@@ -2,7 +2,6 @@ package com.oracle.codekata.print;
 
 import com.oracle.codekata.data.Data;
 import com.oracle.codekata.files.WeatherFileConsumer;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -18,8 +17,8 @@ class WeatherPrintResultsTest {
         WeatherPrintResults wp = new WeatherPrintResults();
         wp.GetDetails(dList);
 
-        assertNotSame(null, wp.getDay());
-        assertNotSame(0, wp.getVariance());
+        assertNotSame(null, wp.GetDay());
+        assertNotSame(0, wp.GetVariance());
 
     }
 

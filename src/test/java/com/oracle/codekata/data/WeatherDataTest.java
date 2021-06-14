@@ -12,17 +12,17 @@ class WeatherDataTest {
     @Test
     void Day_Positive() {
         WeatherData wd = new WeatherData();
-        wd.setDay("1");
+        wd.SetDay("1");
 
-        assertEquals("1", wd.getDay());
+        assertEquals("1", wd.GetDay());
     }
 
     @Test
     void Variance_Positive() {
         WeatherData wd = new WeatherData();
-        wd.setVariance(6);
+        wd.SetVariance(6);
 
-        assertEquals(6, wd.getVariance());
+        assertEquals(6, wd.GetVariance());
 
     }
 
@@ -32,12 +32,12 @@ class WeatherDataTest {
         Date curDateTime = new Date();
 
         WeatherData wd = new WeatherData();
-        wd.setCreationDate(curDateTime);
+        wd.SetCreationDate(curDateTime);
 
-        Assertions.assertSame(wd.getCreationDate(), curDateTime);
+        Assertions.assertSame(wd.GetCreationDate(), curDateTime);
 
-        wd.setUpdateDate(curDateTime);
-        Assertions.assertSame(wd.getUpdateDate(), curDateTime);
+        wd.SetUpdateDate(curDateTime);
+        Assertions.assertSame(wd.GetUpdateDate(), curDateTime);
 
     }
 }

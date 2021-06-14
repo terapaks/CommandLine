@@ -7,19 +7,19 @@ public class WeatherData extends Data {
     private String _day;
     private int _variance;
 
-    public String getDay() {
+    public String GetDay() {
         return _day;
     }
 
-    public void setDay(String _day) {
+    public void SetDay(String _day) {
         this._day = _day;
     }
 
-    public int getVariance() {
+    public int GetVariance() {
         return _variance;
     }
 
-    public void setVariance(int _variance) {
+    public void SetVariance(int _variance) {
         this._variance = _variance;
     }
 }

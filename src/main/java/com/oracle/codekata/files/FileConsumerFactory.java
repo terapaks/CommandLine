@@ -6,7 +6,7 @@ import com.oracle.codekata.print.FootballPrintResults;
 import com.oracle.codekata.print.WeatherPrintResults;
 
 public class FileConsumerFactory {
-    public FileConsumer createFileConsumer(Driver.eOperation inOperation)
+    public FileConsumer CreateFileConsumer(Driver.eOperation inOperation)
     {
         if (inOperation.equals(Driver.eOperation.WEATHER)) {
             return new WeatherFileConsumer();

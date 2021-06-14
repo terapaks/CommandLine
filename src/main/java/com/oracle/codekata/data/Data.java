@@ -13,19 +13,19 @@ public abstract class Data {
     private Date _creationDate;
     private Date _updateDate;
 
-    public Date getCreationDate() {
+    public Date GetCreationDate() {
         return _creationDate;
     }
 
-    public void setCreationDate(Date _creationDate) {
+    public void SetCreationDate(Date _creationDate) {
         this._creationDate = _creationDate;
     }
 
-    public Date getUpdateDate() {
+    public Date GetUpdateDate() {
         return _updateDate;
     }
 
-    public void setUpdateDate(Date _updateDate) {
+    public void SetUpdateDate(Date _updateDate) {
         this._updateDate = _updateDate;
     }
 
