@@ -24,4 +24,9 @@ test {
         events "started", "skipped", "passed", "failed"
         showStandardStreams true
     }
+    filter {
+        //include all tests from package
+        includeTestsMatching "com.oracle.codekata.*"
+
+    }
 }
