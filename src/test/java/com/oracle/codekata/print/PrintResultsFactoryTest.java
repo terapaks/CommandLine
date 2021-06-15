@@ -8,7 +8,7 @@ class PrintResultsFactoryTest {
     @Test
     void PrintResultsFactory_Positive() {
         try{
-            PrintResults pc;
+            iPrintResults pc;
             PrintResultsFactory pcFact = new PrintResultsFactory();
 
             pc = pcFact.CreatePrintResults(Driver.eOperation.FOOTBALL);

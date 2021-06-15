@@ -4,7 +4,7 @@ import com.oracle.codekata.data.Data;
 import com.oracle.codekata.data.WeatherData;
 import com.oracle.codekata.utils.NumberUtils;
 
-public class WeatherFileConsumer extends FileConsumer {
+public class WeatherFileConsumer extends FileConsumer implements iFileConsumer {
     public WeatherFileConsumer() {
         _path = Data.WEATHER_FILE;
     }

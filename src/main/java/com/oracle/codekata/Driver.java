@@ -1,10 +1,13 @@
 package com.oracle.codekata;
 
 import com.oracle.codekata.data.Data;
+import com.oracle.codekata.files.iFileConsumer;
 import com.oracle.codekata.files.FileConsumer;
 import com.oracle.codekata.files.FileConsumerFactory;
 import com.oracle.codekata.print.PrintResults;
 import com.oracle.codekata.print.PrintResultsFactory;
+import com.oracle.codekata.print.iPrintResults;
+
 import java.lang.IllegalArgumentException;
 import java.lang.Exception;
 
@@ -24,8 +27,8 @@ public class Driver {
     }
 
     public static void ExecuteCommandline(String[] args) throws Exception{
-        FileConsumer fc;
-        PrintResults pr;
+        iFileConsumer fc;
+        iPrintResults pr;
 
         ArrayList<Data> dList;
         String val;

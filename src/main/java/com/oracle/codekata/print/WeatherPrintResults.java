@@ -5,7 +5,7 @@ import com.oracle.codekata.data.WeatherData;
 
 import java.util.ArrayList;
 
-public class WeatherPrintResults extends PrintResults {
+public class WeatherPrintResults extends PrintResults implements iPrintResults {
     @Override
     public void PrintDetails() {
         System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", GetDay(), GetVariance());

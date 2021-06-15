@@ -5,7 +5,7 @@ import com.oracle.codekata.data.FootballData;
 
 import java.util.ArrayList;
 
-public class FootballPrintResults extends PrintResults {
+public class FootballPrintResults extends PrintResults implements iPrintResults{
     @Override
     public void PrintDetails() {
         System.out.printf("The team with the least goal variance was %s and the value was %s..\n", GetTeamName(), GetVariance());

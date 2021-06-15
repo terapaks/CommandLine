@@ -9,7 +9,7 @@ class FileConsumerFactoryTest {
     @Test
     void FileConsumerFactory_Positive() {
         try{
-            FileConsumer fc;
+            iFileConsumer fc;
             FileConsumerFactory fcFact = new FileConsumerFactory();
 
             fc = fcFact.CreateFileConsumer(Driver.eOperation.FOOTBALL);

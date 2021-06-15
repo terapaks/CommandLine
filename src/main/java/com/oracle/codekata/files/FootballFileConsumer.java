@@ -4,7 +4,7 @@ import com.oracle.codekata.data.Data;
 import com.oracle.codekata.data.FootballData;
 import com.oracle.codekata.utils.NumberUtils;
 
-public class FootballFileConsumer extends FileConsumer {
+public class FootballFileConsumer extends FileConsumer implements iFileConsumer {
     public FootballFileConsumer() {
         _path = Data.FOOTBALL_FILE;
     }

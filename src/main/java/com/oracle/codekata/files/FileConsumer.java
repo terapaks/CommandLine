@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 
-public abstract class FileConsumer {
+public abstract class FileConsumer implements iFileConsumer {
     protected String _path;
 
     public ArrayList<Data> ReadFile() {

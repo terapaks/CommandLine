@@ -2,6 +2,7 @@ com/oracle/codekata/print/WeatherPrintResults.java
  com.oracle.codekata.print.WeatherPrintResults
 com/oracle/codekata/print/PrintResultsFactory.java
  com.oracle.codekata.print.PrintResultsFactory
+ com.oracle.codekata.print.PrintResultsFactory$1
 com/oracle/codekata/data/WeatherData.java
  com.oracle.codekata.data.WeatherData
 com/oracle/codekata/files/FileConsumer.java
@@ -9,6 +10,8 @@ com/oracle/codekata/files/FileConsumer.java
 com/oracle/codekata/Driver.java
  com.oracle.codekata.Driver
  com.oracle.codekata.Driver$eOperation
+com/oracle/codekata/print/iPrintResults.java
+ com.oracle.codekata.print.iPrintResults
 com/oracle/codekata/utils/NumberUtils.java
  com.oracle.codekata.utils.NumberUtils
 com/oracle/codekata/files/WeatherFileConsumer.java
@@ -23,5 +26,8 @@ com/oracle/codekata/print/FootballPrintResults.java
  com.oracle.codekata.print.FootballPrintResults
 com/oracle/codekata/files/FileConsumerFactory.java
  com.oracle.codekata.files.FileConsumerFactory
+ com.oracle.codekata.files.FileConsumerFactory$1
+com/oracle/codekata/files/iFileConsumer.java
+ com.oracle.codekata.files.iFileConsumer
 com/oracle/codekata/data/FootballData.java
  com.oracle.codekata.data.FootballData
