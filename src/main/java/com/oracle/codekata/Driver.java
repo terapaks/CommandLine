@@ -4,9 +4,7 @@ import com.oracle.codekata.data.Data;
 import com.oracle.codekata.files.iFileConsumer;
 import com.oracle.codekata.files.FileConsumer;
 import com.oracle.codekata.files.FileConsumerFactory;
-import com.oracle.codekata.print.PrintResults;
-import com.oracle.codekata.print.PrintResultsFactory;
-import com.oracle.codekata.print.iPrintResults;
+import com.oracle.codekata.print.*;
 
 import java.lang.IllegalArgumentException;
 import java.lang.Exception;
@@ -57,12 +55,13 @@ public class Driver {
     }
 
     public static eOperation ValidateCmdLine(String inCmdLine){
-        if (inCmdLine.equals(Data.WEATHER_COMMAND_LINE)) {
-            return eOperation.WEATHER;
-        } else if (inCmdLine.equals(Data.FOOTBALL_COMMAND_LINE)) {
-            return eOperation.FOOTBALL;
-        } else {
-            throw new IllegalArgumentException(Data.COMMAND_LINE_ERROR);
+        switch (inCmdLine) {
+            case Data.WEATHER_COMMAND_LINE:
+                return eOperation.WEATHER;
+            case Data.FOOTBALL_COMMAND_LINE:
+                return eOperation.FOOTBALL;
+            default:
+                throw new IllegalStateException("Unexpected command line value: " + inCmdLine);
         }
     }
 
