@@ -30,7 +30,7 @@ class DriverTest {
             Driver.ExecuteCommandline(cmdLine);
             Assertions.fail("Exception expected..."); //should not make it here
         }
-        catch (IllegalArgumentException e){
+        catch (IllegalStateException e){
             Assertions.assertTrue(true);
         }
         catch (Exception e){
@@ -47,7 +47,7 @@ class DriverTest {
             Driver.ExecuteCommandline(cmdLine);
             Assertions.fail("Exception expected..."); //should not make it here
         }
-        catch (IllegalArgumentException e){
+        catch (IllegalStateException e){
             Assertions.assertTrue(true);
         }
         catch (Exception e){

@@ -21,7 +21,7 @@ class WeatherFileConsumerTest {
 
             PrintResults pc = new WeatherPrintResults();
             pc.GetDetails(dList);
-            pc.PrintResult();
+            pc.PrintResults();
         }
         catch(Exception e){
             Assertions.fail();

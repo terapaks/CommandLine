@@ -21,7 +21,7 @@ class FootballFileConsumerTest {
 
             PrintResults pc = new FootballPrintResults();
             pc.GetDetails(dList);
-            pc.PrintResult();
+            pc.PrintResults();
         }
         catch(Exception e){
             Assertions.fail();
