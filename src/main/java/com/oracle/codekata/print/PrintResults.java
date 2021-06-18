@@ -5,11 +5,13 @@ import com.oracle.codekata.data.Data;
 import java.util.ArrayList;
 
 public abstract class PrintResults {
-    public void PrintResult() {
-        PrintDetails();
+    public void PrintResults() {
+        PrintResult();
     }
 
-    abstract public void PrintDetails();
+    abstract public void PrintResult();
+
+    abstract public String PrintDetails();
 
     abstract public void GetDetails(ArrayList<Data> inList);
 }

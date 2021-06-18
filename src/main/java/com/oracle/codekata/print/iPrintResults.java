@@ -5,9 +5,10 @@ import com.oracle.codekata.data.Data;
 import java.util.ArrayList;
 
 public interface iPrintResults {
-    public void PrintDetails();
+    void PrintResult();
 
-    public void GetDetails(ArrayList<Data> inList);
+    String PrintDetails();
 
-    public void PrintResult();
+    void GetDetails(ArrayList<Data> inList);
+
 }

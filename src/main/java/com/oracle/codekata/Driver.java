@@ -61,7 +61,7 @@ public class Driver {
             case Data.FOOTBALL_COMMAND_LINE:
                 return eOperation.FOOTBALL;
             default:
-                throw new IllegalStateException("Unexpected command line value: " + inCmdLine);
+                throw new IllegalStateException("Unexpected parameter: " + inCmdLine);
         }
     }
 

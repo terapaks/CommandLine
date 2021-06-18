@@ -7,7 +7,14 @@ import java.util.ArrayList;
 
 public class FootballPrintResults extends PrintResults implements iPrintResults{
     @Override
-    public void PrintDetails() {
+    public String PrintDetails() {
+        String val = "The team with the least goal variance was " + GetTeamName() + " and the value was " + GetVariance() + "\n";
+        return val;
+
+    }
+
+    @Override
+    public void PrintResult(){
         System.out.printf("The team with the least goal variance was %s and the value was %s..\n", GetTeamName(), GetVariance());
     }
 

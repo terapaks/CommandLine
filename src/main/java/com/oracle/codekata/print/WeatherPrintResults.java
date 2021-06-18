@@ -7,8 +7,13 @@ import java.util.ArrayList;
 
 public class WeatherPrintResults extends PrintResults implements iPrintResults {
     @Override
-    public void PrintDetails() {
+    public void PrintResult() {
         System.out.printf("The day with the least temperature variance was %s and the value was %s..\n", GetDay(), GetVariance());
+    }
+
+    @Override
+    public String PrintDetails() {
+        return "The team with the least goal variance was " + GetDay() + " and the value was " + GetVariance() + "..\n";
     }
 
     @Override
